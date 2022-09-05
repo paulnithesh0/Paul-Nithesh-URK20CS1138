@@ -1,37 +1,35 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Fruit Farm</title>
-</head>
-<body>
-<h1><b>Fruit Farm</b></h1>
-<div>
-Rows:<input type="text" id="row">
-Colums:<input type="text" id="column">
-<button type="button" onclick="grow()">Plant Garden</button>
-</div>
-<p id="garden"></p>
-<script>
-function grow()
-{
-var Rows = parseInt(document.getElementById("row").value);
-var Colums = parseInt(document.getElementById("column").value);
-var arr = ["https://tse2.mm.bing.net/th?id=OIP.m3_V7Vd54gUV6GvlE42VggHaHa&pid=Api&P=0","https://tse2.mm.bing.net/th?id=OIP.2teayoOKLQJujF99D2D4RgHaHa&pid=Api&P=0"];
-var Name = arr[Math.floor(Math.random() * arr.length)];
-for (let i =0; i<Rows; i++)
-{
-for(let j = 0; j<Colums; j++)
-{
-var arr = ["https://tse2.mm.bing.net/th?id=OIP.m3_V7Vd54gUV6GvlE42VggHaHa&pid=Api&P=0","https://tse2.mm.bing.net/th?id=OIP.2teayoOKLQJujF99D2D4RgHaHa&pid=Api&P=0"];
-var Name = arr[Math.floor(Math.random() * arr.length)];
-string = document.getElementById("garden").innerHTML +="<img
-
-src="+Name+" width=100px height=100px>";
-
-}
-garden.innerHTML += "<br>";
-}
-}
-</script>
-</body>
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>Fruit Farm</title> 
+    </head> 
+    <body> 
+        <h1><b>Fruit Farm</b></h1> 
+        <div> 
+            Rows:<input type="text" id="row"> 
+            Colums:<input type="text" id="column"> 
+            <button type="button" onclick="grow()">Plant Garden</button>         
+        </div> 
+        <p id="garden"></p> 
+        <script>             
+        function grow() 
+            {             
+                var Rows = parseInt(document.getElementById("row").value);             
+                var Colums = parseInt(document.getElementById("column").value);             
+                var arr = ["orange.jpg","apple.jpg"];             
+                var Name = arr[Math.floor(Math.random() * arr.length)]; 
+                        
+                for (let i =0; i<Rows; i++) 
+            {                 
+                for(let j = 0; j<Colums; j++) 
+                {                    
+                     var arr = ["data:image/jpeg;base64,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","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmIEskRijFwe5A7Dxq9I89uQ4IgjuY0H7cm58RkRKZ3w&s"];                     var Name = arr[Math.floor(Math.random() * arr.length)];                     
+                     string = document.getElementById("garden").innerHTML +="<img src="+Name+" width=100px height=100px>";       
+                }              
+                garden.innerHTML += "<br>"; 
+            }             
+ 
+            }  
+        </script> 
+    </body> 
 </html>
